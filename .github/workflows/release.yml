@@ -19,7 +19,7 @@ jobs:
       with:
         bodyFile: "changelog.md"
         token: ${{ secrets.GITHUB_TOKEN }}
-        release_branches: master
         tag: ${{ steps.tag_version.outputs.new_tag }}
         custom_tag: "Beta-${{ steps.tag_version.outputs.new_tag }}"
+        name: Beta ${{ steps.tag_version.outputs.new_tag }}
 
