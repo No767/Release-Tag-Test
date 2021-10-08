@@ -10,13 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Create Tag + Bump Version
-      uses: mathieudutour/github-tag-action@v5.6
+      uses: anothrNick/github-tag-action@1.36.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        custom_tag: 1.${{ steps.tag_version.outputs.new_tag }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         release_branches: master
         tag_prefix: Beta-
-        default_bump: minor
+        DEFAULT_BUMP: minor
+        INITIAL_VERSION: 1.4
       id: tag_version
     - name: Release
       uses: ncipollo/release-action@v1
