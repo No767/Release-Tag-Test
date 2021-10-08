@@ -25,4 +25,4 @@ jobs:
         name: ${{ steps.tag_version.outputs.new_tag }}
         release_branches: master
         tag: ${{ steps.tag_version.outputs.new_tag }}
-        custom_release_rules: "Release - ${{ steps.tag_version.outputs.new_tag }}"
+        custom_release_rules: Release - ${{ steps.tag_version.outputs.new_tag }}
