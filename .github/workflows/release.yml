@@ -13,10 +13,10 @@ jobs:
       uses: anothrNick/github-tag-action@1.36.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        release_branches: master
-        tag_prefix: Beta-
+        RELEASE_BRANCHES: master
+        TAG_PREFIX: Beta-
         DEFAULT_BUMP: minor
-        INITIAL_VERSION: 1.4
+        INITIAL_VERSION: 1.4.0
       id: tag_version
     - name: Release
       uses: ncipollo/release-action@v1
