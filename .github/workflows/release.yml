@@ -17,7 +17,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
       id: tag_version
     - name: Release
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         bodyFile: "body.md"
         token: ${{ secrets.GITHUB_TOKEN }}
