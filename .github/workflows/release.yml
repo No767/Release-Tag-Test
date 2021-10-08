@@ -15,8 +15,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         RELEASE_BRANCHES: master
         TAG_PREFIX: Beta-
-        DEFAULT_BUMP: minor
-        INITIAL_VERSION: 1.4.0
+        DEFAULT_BUMP: major
+        INITIAL_VERSION: 1.0.0
       id: tag_version
     - name: Release
       uses: ncipollo/release-action@v1
