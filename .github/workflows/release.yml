@@ -12,11 +12,13 @@ jobs:
       with:
         fetch-depth: '0'
     - name: Create Tag + Bump Version
-      uses: anothrNick/github-tag-action@1.36.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE_BRANCHES: master
-        DEFAULT_BUMP: major
+      uses: mathieudutour/github-tag-action@v5.6
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        release_branches: master
+        default_bump: false
+        tag_prefix: Beta-
+        custom_release_rules: "Release:major, Update:minor, Fix:patch"
       id: tag_version
     - name: Release
       uses: ncipollo/release-action@v1
