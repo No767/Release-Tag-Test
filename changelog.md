@@ -6,3 +6,4 @@
 # Removals
 - no
 - API support
+- instagram api support
