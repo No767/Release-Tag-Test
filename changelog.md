@@ -5,3 +5,4 @@
 
 # Removals
 - no
+- API support
